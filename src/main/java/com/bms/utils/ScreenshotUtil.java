@@ -20,6 +20,6 @@ public class ScreenshotUtil {
         File src  = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File dest = new File("screenshots/" + fileName + ".png");
         FileHandler.copy(src, dest);
-        System.out.println("Screenshot saved: " + dest.getAbsolutePath());
+        System.out.println("Screenshot saved: " +  dest.getAbsolutePath());
     }
 }
