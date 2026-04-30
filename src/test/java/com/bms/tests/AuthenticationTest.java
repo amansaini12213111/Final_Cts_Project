@@ -2,12 +2,15 @@
 package com.bms.tests;
 
 import com.bms.base.BaseClass;
+import com.bms.utils.*;
 import com.bms.pages.HomePage;
 import com.bms.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(ListenerUtil.class) 
 public class AuthenticationTest extends BaseClass {
 
 
@@ -21,6 +24,7 @@ public class AuthenticationTest extends BaseClass {
 
         // 2. Initialize the object once for this class
         loginPage = new LoginPage(driver);
+        
     }
 
     @Test(priority = 1)
